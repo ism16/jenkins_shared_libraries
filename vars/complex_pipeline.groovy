@@ -3,7 +3,7 @@ def call(Map config=[:], Closure body) {
     node(config.node) {
         stage("Checkout") {
 
-            git branch: '${config.branch}', credentialsId: '${config.credentials}', url: '${config.repo}'
+            git branch: config.branch, credentialsId: config.credentials, url: config.repo
         }
 
         stage("Build") {
