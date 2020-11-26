@@ -2,7 +2,7 @@ package org.mycheckout;
 
 
 def mycheckout(Map config=[:]) {
-    if (config.credentialsId) {
+    if (config.credentials) {
         git branch: config.branch, 
             credentialsId: config.credentials, 
             url: config.repo
